@@ -293,3 +293,11 @@ function updateRedSquare() {
 
 // Call updateRedSquare once to set the initial position
 updateRedSquare();
+
+
+// Check if the device is in standalone mode (added to home screen)
+if (window.navigator.standalone) {
+  // Set the viewport to be the same size as the device's screen
+  let viewport = document.querySelector("meta[name=viewport]");
+  viewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0");
+}
